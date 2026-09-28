@@ -8,7 +8,7 @@ from perception.forward_velocity_reader import (
 from perception.perception import Perception
 
 
-VIDEO_PATH = "./material/ozempic08.mp4"
+VIDEO_PATH = "./material/mp4/ozempic08.mp4"
 
 OUTPUT_PATH = "velocity_trace.csv"
 
@@ -56,7 +56,7 @@ def main():
                 successful_frames += 1
 
             rows.append({
-                "timestamp_s": timestamp_s,
+                "timestamp_s": round(timestamp_s, 3),
                 "velocity_u": velocity,
                 "confidence": confidence,
                 "above_2600": (

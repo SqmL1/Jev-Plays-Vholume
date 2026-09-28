@@ -78,7 +78,7 @@ class ForwardVelocityReader:
                 continue
 
             recognized_digits.append(str(digit))
-            confidences.append(confidence)
+            confidences.append(round(confidence,2))
 
         if not recognized_digits:
             return self._empty_reading()

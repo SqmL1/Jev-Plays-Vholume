@@ -22,7 +22,7 @@ class Perception:
         )
 
         return Observation(
-            timestamp_s=timestamp_s,
+            timestamp_s=round(timestamp_s, 4),
             forward_velocity_u=velocity.velocity_u,
             forward_velocity_confidence=velocity.confidence,
             above_target_velocity=velocity.above_2600,
